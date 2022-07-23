@@ -14,3 +14,35 @@
 }
 
 /*end footer*/
+.footer-section{
+  position:relative;
+}
+.footer-section .container{
+  position:relative;
+}
+.footer-section .img-section i,
+.footer-section   p{
+  color:#999;
+}
+.footer-section .img-section i {
+  font-size:25px;
+
+}
+
+.footer-section .img-section .twitter,.youtube{
+  margin:0 20px;
+}
+
+.footer-section .Gymat a{
+  display:block;
+  font-weight:bold;
+  font-size:20px;
+  margin:10px 0;
+  color:#333;
+
+}
+.text-section
+{ position:relative;
+  color:#fff;
+  background-color:#000;
+}
