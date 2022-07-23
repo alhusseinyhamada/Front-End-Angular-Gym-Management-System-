@@ -1,3 +1,23 @@
 .gym-image{
   background-image:url('https://radiustheme.com/demo/wordpress/themes/gymat/wp-content/uploads/2022/04/shape-17.png');
 }
+
+
+/*start image-fitness*/
+.image-fitness
+{
+  background-image:url('/assets/images/cta-1.jpg');
+  color:#fff;
+  padding:150px 0;
+}
+.image-fitness button{
+  background-color:#ff0336;
+  color:#fff;
+  font-size:15px;
+  padding:10px;
+  border:none;
+  outline:none;
+}
+
+
+/*end image-fitness*/
