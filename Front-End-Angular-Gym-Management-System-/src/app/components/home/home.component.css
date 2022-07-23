@@ -21,3 +21,39 @@
 
 
 /*end image-fitness*/
+
+
+/*start trainer-section*/
+.trainer-section{
+  padding:100px 0;
+  background-image:url('/assets/images/Group-47-1-1.jpg');
+  color:#fff;
+  position:relative;
+}
+
+.trainer-section .section-one{
+  background: #fff;
+  border: none;
+  border-radius: 200px 100px;
+  overflow:hidden;
+  padding:20px 0 0 0;
+  -webkit-border-radius: 200px 100px;
+  -moz-border-radius: 200px 100px;
+  -ms-border-radius: 200px 100px;
+  -o-border-radius: 200px 100px;
+}
+
+.trainer-section .section-one .text{
+  margin:80px 0 0 80px;
+}
+.trainer-section .section-one .text h4{
+  font-weight:bold;
+  color:#000;
+}
+.trainer-section .section-one .text p{
+  color:#888;
+}
+
+
+
+/*end trainer-section>*/
