@@ -1,0 +1,57 @@
+nav {
+  font-family: 'Montserrat', 'sans serif';
+  font-size: 18px;
+  line-height: 15px;
+  background-color: black;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  padding: 0 16px;
+  display: inline-block;
+  position: relative;
+  line-height: 21px;
+  text-align: left;
+}
+
+ul li a {
+  color: white;
+  padding: 15px 0;
+}
+
+li > a.active {
+  border-bottom: 3px solid#FF0336 !important;
+}
+
+img {
+  vertical-align: middle;
+}
+
+.nav-right .cart svg {
+  fill: white;
+  width: 30px;
+}
+
+.nav-right .join {
+  padding: 5px;
+  border-radius: 3px;
+  border: 1px solid white;
+  text-decoration: none;
+}
+
+.nav-right .join svg {
+  fill: white;
+  width: 29px;
+  background-color: #FF0336;
+  padding: 8px;
+  border-radius: 3px;
+}
+
+.nav-right .join span {
+  vertical-align: middle;
+  color: white;
+}
