@@ -4,9 +4,7 @@ import { BodyComponent } from './components/body/body.component';
 import { HomeComponent } from './components/home/home.component';
 import { MainLayoutComponent } from './components/main-layout/main-layout.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
-// const routes: Routes = [
 
-// ];
 
 const routes: Routes = [{path:"",component: MainLayoutComponent,children:[
   {path:"",redirectTo:'home',pathMatch:'full'},//Default Path
