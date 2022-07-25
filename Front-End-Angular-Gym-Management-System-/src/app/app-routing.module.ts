@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AboutComponent } from './components/about/about.component';
 import { BodyComponent } from './components/body/body.component';
 import { HomeComponent } from './components/home/home.component';
 import { MainLayoutComponent } from './components/main-layout/main-layout.component';
@@ -10,6 +11,8 @@ const routes: Routes = [{path:"",component: MainLayoutComponent,children:[
   {path:"",redirectTo:'home',pathMatch:'full'},//Default Path
   {path:'home',component:HomeComponent},
   {path:'contact',component:BodyComponent},
+  {path:'about',component:AboutComponent},
+
 
 ]},{path:'**',component:NotFoundComponent},
 ];

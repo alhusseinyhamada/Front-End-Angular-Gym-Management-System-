@@ -1,0 +1,42 @@
+/*start image-header*/
+.image-header{
+  background-image:url('/assets/images/banner.jpg');
+  background-size:cover;
+  background-repeat:no-repeat;
+  color:#fff;
+  height:400px;
+}
+.image-header .text{
+  height:400px;
+ 
+}
+.image-header .text button{
+  background-color:#ff0336;
+  border:none;
+  outline:none;
+  color:#fff;
+  padding:10px;
+  display:block !important;
+}
+/*end image-header*/
+
+
+/*start history*/
+.history .img{
+ 
+  overflow: hidden;
+}
+
+.history img:hover{
+  transform:scaley(1.1);
+  -webkit-transform:scaley(1.1);
+  -moz-transform:scaley(1.1);
+  -ms-transform:scaley(1.1);
+  -o-transform:scaley(1.1);
+}
+
+.history .icon:hover .bi{
+   color:#ff0336;
+    font-size:100px;
+}
+/*end history*/
