@@ -10,6 +10,7 @@ import { MainLayoutComponent } from './components/main-layout/main-layout.compon
 import { HomeComponent } from './components/home/home.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { ClassComponent } from './components/class/class.component';
+import { AboutComponent } from './components/about/about.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ClassComponent } from './components/class/class.component';
     MainLayoutComponent,
     HomeComponent,
     NotFoundComponent,
-    ClassComponent
+    ClassComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
