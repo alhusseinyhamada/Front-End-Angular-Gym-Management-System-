@@ -11,6 +11,7 @@ import { HomeComponent } from './components/home/home.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { ClassComponent } from './components/class/class.component';
 import { AboutComponent } from './components/about/about.component';
+import { TrainerComponent } from './components/trainer/trainer.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { AboutComponent } from './components/about/about.component';
     HomeComponent,
     NotFoundComponent,
     ClassComponent,
-    AboutComponent
+    AboutComponent,
+    TrainerComponent
   ],
   imports: [
     BrowserModule,

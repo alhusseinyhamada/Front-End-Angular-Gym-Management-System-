@@ -6,6 +6,7 @@ import { ClassComponent } from './components/class/class.component';
 import { HomeComponent } from './components/home/home.component';
 import { MainLayoutComponent } from './components/main-layout/main-layout.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { TrainerComponent } from './components/trainer/trainer.component';
 // const routes: Routes = [
 
 // ];
@@ -16,6 +17,9 @@ const routes: Routes = [{path:"",component: MainLayoutComponent,children:[
   {path:'contact',component:BodyComponent},
   {path:'classes',component:ClassComponent},
   {path:'about',component:AboutComponent},
+  {path:'trainers',component:TrainerComponent},
+
+
 ]},
 {path:'**',component:NotFoundComponent},
 ];
