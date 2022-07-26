@@ -6,10 +6,9 @@ import { ClassComponent } from './components/class/class.component';
 import { HomeComponent } from './components/home/home.component';
 import { MainLayoutComponent } from './components/main-layout/main-layout.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { TrainerDetailComponent } from './components/trainer-detail/trainer-detail.component';
 import { TrainerComponent } from './components/trainer/trainer.component';
-// const routes: Routes = [
 
-// ];
 
 const routes: Routes = [{path:"",component: MainLayoutComponent,children:[
   {path:"",redirectTo:'home',pathMatch:'full'},//Default Path
@@ -18,6 +17,9 @@ const routes: Routes = [{path:"",component: MainLayoutComponent,children:[
   {path:'classes',component:ClassComponent},
   {path:'about',component:AboutComponent},
   {path:'trainers',component:TrainerComponent},
+  {path:'trainerdetails',component:TrainerDetailComponent},
+
+
 
 
 ]},
