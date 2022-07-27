@@ -14,6 +14,10 @@
   border-radius: 10px;
   background-color: transparent;
   cursor: pointer;
+  -webkit-border-radius:;
+  -moz-border-radius:;
+  -ms-border-radius:;
+  -o-border-radius:;
 } */
 
 .to-top {
@@ -31,6 +35,14 @@
   fill: white;
   background-color: #FF0336;
   border-radius: 50px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
 }
 
 .to-top:hover {

@@ -14,6 +14,8 @@ import { AboutComponent } from './components/about/about.component';
 import { TrainerComponent } from './components/trainer/trainer.component';
 import { TopComponent } from './components/top/top.component';
 import { ClassDetailsComponent } from './components/class-details/class-details.component';
+import { TrainerDetailComponent } from './components/trainer-detail/trainer-detail.component';
+
 
 @NgModule({
   declarations: [
@@ -28,7 +30,8 @@ import { ClassDetailsComponent } from './components/class-details/class-details.
     AboutComponent,
     TrainerComponent,
     TopComponent,
-    ClassDetailsComponent
+    ClassDetailsComponent,
+    TrainerDetailComponent
   ],
   imports: [
     BrowserModule,
