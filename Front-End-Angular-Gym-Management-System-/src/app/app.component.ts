@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LoginService } from './services/login.service';
 
 @Component({
   selector: 'app-contact',
@@ -7,4 +8,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Ecommerce-project';
+  // nam:string='ali';
+
+  constructor(private login:LoginService){
+    // console.log(this.login.login('add'));
+
+  }
+
+
 }

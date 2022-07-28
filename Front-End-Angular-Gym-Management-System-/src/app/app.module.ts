@@ -17,6 +17,8 @@ import { ClassDetailsComponent } from './components/class-details/class-details.
 import { TrainerDetailComponent } from './components/trainer-detail/trainer-detail.component';
 import { TodayClassesComponent } from './components/today-classes/today-classes.component';
 import { Next2DaysClassesComponent } from './components/next2-days-classes/next2-days-classes.component';
+import { LoginService } from './services/login.service';
+import { ShopComponent } from './components/shop/shop.component';
 
 
 @NgModule({
@@ -35,13 +37,14 @@ import { Next2DaysClassesComponent } from './components/next2-days-classes/next2
     ClassDetailsComponent,
     TrainerDetailComponent,
     TodayClassesComponent,
-    Next2DaysClassesComponent
+    Next2DaysClassesComponent,
+    ShopComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [LoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -9,6 +9,7 @@ import { MainLayoutComponent } from './components/main-layout/main-layout.compon
 import { Next2DaysClassesComponent } from './components/next2-days-classes/next2-days-classes.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { TodayClassesComponent } from './components/today-classes/today-classes.component';
+import { ShopComponent } from './components/shop/shop.component';
 import { TrainerDetailComponent } from './components/trainer-detail/trainer-detail.component';
 import { TrainerComponent } from './components/trainer/trainer.component';
 
@@ -24,6 +25,8 @@ const routes: Routes = [{path:"",component: MainLayoutComponent,children:[
   {path:'about',component:AboutComponent},
   {path:'trainers',component:TrainerComponent},
   {path:'trainerdetails',component:TrainerDetailComponent},
+  {path:'shop',component:ShopComponent},
+
 
 
 
