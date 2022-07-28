@@ -15,6 +15,8 @@ import { TrainerComponent } from './components/trainer/trainer.component';
 import { TopComponent } from './components/top/top.component';
 import { ClassDetailsComponent } from './components/class-details/class-details.component';
 import { TrainerDetailComponent } from './components/trainer-detail/trainer-detail.component';
+import { LoginService } from './services/login.service';
+import { ShopComponent } from './components/shop/shop.component';
 
 
 @NgModule({
@@ -31,13 +33,14 @@ import { TrainerDetailComponent } from './components/trainer-detail/trainer-deta
     TrainerComponent,
     TopComponent,
     ClassDetailsComponent,
-    TrainerDetailComponent
+    TrainerDetailComponent,
+    ShopComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [LoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
