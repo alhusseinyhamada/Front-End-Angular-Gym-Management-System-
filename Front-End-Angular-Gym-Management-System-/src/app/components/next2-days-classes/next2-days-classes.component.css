@@ -1,7 +1,3 @@
-.detail {
-  background-color: #F8F8F8;
-}
-
 a {
   text-decoration: none;
   color: white;
@@ -35,55 +31,6 @@ a:hover {
   100% {left:13%; top: 20%;}
 }
 
-.container .row .data1,
-.data3,
-.data4 {
-  background-color: white;
-}
-
-div .leftColumn {
-  height: auto;
-}
-
-.data1{
-  margin-right: 3%;
-  width: 65%;
-}
-.data2{
-  width: 32%;
-}
-
-.data3 .title,
-.data4 .title {
-  position: relative;
-}
-
-.data3 .title:before,
-.data4 .title:before {
-  content : "";
-  position: absolute;
-  left    : 0;
-  bottom  : 0;
-  width   : 10%;
-  border-bottom: 4px solid #FF0336;
-}
-
-.contactbtn {
-  background-color: #FF0336;
-  color: white;
-  border-radius: 0;
-}
-
-.contactbtn:hover {
-  background-color: #DB163E;
-  color: white;
-}
-
-.contactbtn svg {
-  width: 25px;
-  fill: white;
-}
-
 .classBorder {
   overflow: hidden;
   transition: all 0.5s ease;
@@ -95,7 +42,7 @@ div .leftColumn {
 }
 
 .classBorder:hover img {
-  transform: scale(1.1);
+  transform: scale(1.5);
 }
 
 .classImg {
@@ -115,12 +62,38 @@ div .leftColumn {
   filter: grayscale(0%);
 }
 
-.class-title:hover {
-  color: #FF0336;
+.classBrand {
+  background-color:white;
+  opacity: 0.4;
+  position: absolute;
+  top: 65px;
+  left: -50px;
+  width: 150px;
+  height: 70px;
+  border-bottom-right-radius: 35px;
+  border-top-right-radius: 35px;
+  -webkit-transform: rotate(30deg);
+  -ms-transform: rotate(30deg);
+  transform: rotate(30deg);
+  -moz-transform: rotate(30deg);
+  -o-transform: rotate(30deg);
 }
 
-ul svg {
-  fill: #FF0336;
-  width: 25px;
-  margin-right: 15px;
+.classBrand svg {
+  width:60px;
+  fill:rgb(98, 98, 98) !important;
+  top: 10px;
+  left: 80px;
+  position: absolute;
+  opacity: 100% !important;
+  transform: rotate(-30deg) !important;
+}
+
+
+.classBorder:hover .classBrand svg {
+  fill: #FF0336 !important;
+}
+
+.classBorder:hover .classBrand {
+  opacity: 1;
 }

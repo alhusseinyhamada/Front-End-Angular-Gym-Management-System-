@@ -18,8 +18,12 @@
         <li class="nav-item">
           <a class="nav-link" routerLinkActive="active" routerLink="/trainers">Trainers</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLinkActive="active" routerLink="/classes">Classes</a>
+        <li class="dropdown-submenu nav-item">
+          <a class="dropdown-item dropdown-toggle nav-link" routerLinkActive="active" routerLink="/classes">Classes</a>
+          <ul class="dropdown-menu">
+              <li class="nav-item"><a class="dropdown-item nav-link" routerLink="/classes/today's-classes">Today's Classes</a></li>
+              <li class="nav-item"><a class="dropdown-item nav-link" routerLink="/classes/next-2-day's-classes">Next 2 Day's Classes</a></li>
+          </ul>
         </li>
         <li class="nav-item">
           <a class="nav-link" routerLinkActive="active" routerLink="/schedules">Schedules</a>
@@ -28,7 +32,7 @@
           <a class="nav-link" routerLinkActive="active" routerLink="/blogs">Blogs</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLinkActive="active" routerLink="/shops">Shops</a>
+          <a class="nav-link" routerLinkActive="active" routerLink="/shop">Shops</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" routerLinkActive="active" routerLink="/contact">Contact</a>
