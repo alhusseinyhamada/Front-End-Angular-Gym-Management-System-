@@ -15,6 +15,13 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { HttpClientModule } from '@angular/common/http';
 import { CalculatorComponent } from './components/calculator/calculator.component';
+import { ClassComponent } from './components/class/class.component';
+import { AboutComponent } from './components/about/about.component';
+import { TrainerComponent } from './components/trainer/trainer.component';
+import { TopComponent } from './components/top/top.component';
+import { ClassDetailsComponent } from './components/class-details/class-details.component';
+import { TrainerDetailComponent } from './components/trainer-detail/trainer-detail.component';
+
 
 @NgModule({
   declarations: [
@@ -25,8 +32,15 @@ import { CalculatorComponent } from './components/calculator/calculator.componen
     MainLayoutComponent,
     HomeComponent,
     NotFoundComponent,
-    CalculatorComponent
+    CalculatorComponent,
 
+
+
+    AboutComponent,
+    TrainerComponent,
+    TopComponent,
+    ClassDetailsComponent,
+    TrainerDetailComponent , 
   ],
   imports: [
     BrowserModule,
