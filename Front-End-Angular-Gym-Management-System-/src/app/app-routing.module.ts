@@ -6,6 +6,9 @@ import { ClassComponent } from './components/class/class.component';
 import { HomeComponent } from './components/home/home.component';
 import { MainLayoutComponent } from './components/main-layout/main-layout.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { SigninComponent } from './components/signin/signin.component';
+import { SignupComponent } from './components/signup/signup.component';
+import { UserProfileComponent } from './components/user-profile/user-profile.component';
 // const routes: Routes = [
 
 // ];
@@ -13,6 +16,10 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 const routes: Routes = [{path:"",component: MainLayoutComponent,children:[
   {path:"",redirectTo:'home',pathMatch:'full'},//Default Path
   {path:'home',component:HomeComponent},
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
+  { path: 'login', component: SigninComponent },
+  { path: 'register', component: SignupComponent },
+  { path: 'profile', component: UserProfileComponent },
   {path:'contact',component:BodyComponent},
   {path:'classes',component:ClassComponent},
   {path:'about',component:AboutComponent},

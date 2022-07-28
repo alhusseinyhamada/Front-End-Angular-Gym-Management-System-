@@ -11,6 +11,14 @@ import { HomeComponent } from './components/home/home.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { ClassComponent } from './components/class/class.component';
 import { AboutComponent } from './components/about/about.component';
+import {  ReactiveFormsModule,FormsModule } from '@angular/forms';
+import { SigninComponent } from './components/signin/signin.component';
+import { SignupComponent } from './components/signup/signup.component';
+import { UserProfileComponent } from './components/user-profile/user-profile.component';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { AuthInterceptor } from './shared/auth.interceptor';
+
+
 
 @NgModule({
   declarations: [
@@ -22,13 +30,26 @@ import { AboutComponent } from './components/about/about.component';
     HomeComponent,
     NotFoundComponent,
     ClassComponent,
-    AboutComponent
+    AboutComponent,
+    SigninComponent,
+    SignupComponent,
+   
+    UserProfileComponent
+   
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+     HttpClientModule,
+        FormsModule
+
   ],
-  providers: [],
+  providers: [ {
+    provide: HTTP_INTERCEPTORS,
+    useClass: AuthInterceptor,
+    multi: true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
