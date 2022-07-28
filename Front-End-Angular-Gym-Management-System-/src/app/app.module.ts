@@ -15,6 +15,8 @@ import { TrainerComponent } from './components/trainer/trainer.component';
 import { TopComponent } from './components/top/top.component';
 import { ClassDetailsComponent } from './components/class-details/class-details.component';
 import { TrainerDetailComponent } from './components/trainer-detail/trainer-detail.component';
+import { TodayClassesComponent } from './components/today-classes/today-classes.component';
+import { Next2DaysClassesComponent } from './components/next2-days-classes/next2-days-classes.component';
 
 
 @NgModule({
@@ -31,7 +33,9 @@ import { TrainerDetailComponent } from './components/trainer-detail/trainer-deta
     TrainerComponent,
     TopComponent,
     ClassDetailsComponent,
-    TrainerDetailComponent
+    TrainerDetailComponent,
+    TodayClassesComponent,
+    Next2DaysClassesComponent
   ],
   imports: [
     BrowserModule,
