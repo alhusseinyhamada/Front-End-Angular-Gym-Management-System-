@@ -47,9 +47,9 @@ img {
   text-decoration: none;
 }
 
-.nav-right .join svg:hover {
+/* .nav-right .join svg:hover {
   -webkit-transform:rotate(360deg);
-}
+} */
 
 .nav-right .join .span {
   background-color: #FF0336;
@@ -61,7 +61,7 @@ img {
   fill: white;
   width: 29px;
   padding: 8px;
-  -webkit-transition: width 2s,-webkit-transform 2s;
+  /* -webkit-transition: width 2s,-webkit-transform 2s; */
 }
 
 .nav-right .join span {

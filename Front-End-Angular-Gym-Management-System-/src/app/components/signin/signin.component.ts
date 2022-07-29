@@ -29,6 +29,8 @@ export class SigninComponent implements OnInit {
     this.authService.signin(this.loginForm.value).subscribe(
       (result) => {
         this.responseHandler(result);
+        console.log(result);
+
       },
       (error) => {
         this.errors = error.error;
@@ -43,7 +45,9 @@ export class SigninComponent implements OnInit {
   }
   // Handle response
   responseHandler(data:any) {
-    this.token.handleData(data.access_token);
 
+
+    this.token.handleData(data.user.access_token);
+            
   }
 }

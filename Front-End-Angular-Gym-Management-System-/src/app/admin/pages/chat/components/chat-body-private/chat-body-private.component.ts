@@ -8,8 +8,8 @@ import {Messages} from '../../model/messages';
   styleUrls: ['./chat-body-private.component.scss']
 })
 export class ChatBodyPrivateComponent implements OnInit {
-  @Input() selectedUser: UserAuth;
-  @Input() authUser: UserAuth;
+  @Input() selectedUser!: UserAuth;
+  @Input() authUser!: UserAuth;
   @Input() allMessages: Messages[] = [];
 
   constructor() { }

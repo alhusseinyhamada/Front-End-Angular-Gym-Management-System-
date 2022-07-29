@@ -9,6 +9,10 @@ import { BodyComponent } from './components/body/body.component';
 import { MainLayoutComponent } from './components/main-layout/main-layout.component';
 import { HomeComponent } from './components/home/home.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { LayoutModule } from './layout/layout.module';
+
+
+import { CalculatorComponent } from './components/calculator/calculator.component';
 import { ClassComponent } from './components/class/class.component';
 import { AboutComponent } from './components/about/about.component';
 import {  ReactiveFormsModule,FormsModule } from '@angular/forms';
@@ -17,6 +21,7 @@ import { SignupComponent } from './components/signup/signup.component';
 import { UserProfileComponent } from './components/user-profile/user-profile.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthInterceptor } from './shared/auth.interceptor';
+import { AdminInterceptor } from './services/shared/admin.interceptor';
 
 
 import { TrainerComponent } from './components/trainer/trainer.component';
@@ -27,6 +32,7 @@ import { TodayClassesComponent } from './components/today-classes/today-classes.
 import { Next2DaysClassesComponent } from './components/next2-days-classes/next2-days-classes.component';
 import { LoginService } from './services/login.service';
 import { ShopComponent } from './components/shop/shop.component';
+import { AdminloginComponent } from './components/views/admin/adminlogin/adminlogin.component';
 
 
 
@@ -39,14 +45,15 @@ import { ShopComponent } from './components/shop/shop.component';
     MainLayoutComponent,
     HomeComponent,
     NotFoundComponent,
-    ClassComponent,
+    CalculatorComponent,
+
     AboutComponent,
     SigninComponent,
     SignupComponent,
    
     UserProfileComponent,
    
-
+    AdminloginComponent,
     TrainerComponent,
     TopComponent,
     ClassDetailsComponent,
@@ -60,18 +67,31 @@ import { ShopComponent } from './components/shop/shop.component';
     AppRoutingModule,
     ReactiveFormsModule,
      HttpClientModule,
-        FormsModule
+        FormsModule,
+
+    LayoutModule,
+    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule
 
   ],
-  providers: [ {
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AdminInterceptor,
+      multi: true,
+    
+  
+  
+    },
+    {
     provide: HTTP_INTERCEPTORS,
     useClass: AuthInterceptor,
     multi: true,
   
 
 
-  },
-    LoginService],
+  }],
  
   bootstrap: [AppComponent]
 })

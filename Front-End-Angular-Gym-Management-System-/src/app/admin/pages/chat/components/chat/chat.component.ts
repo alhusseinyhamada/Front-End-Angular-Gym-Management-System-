@@ -12,14 +12,14 @@ import {Messages} from '../../model/messages';
   styleUrls: ['./chat.component.scss']
 })
 export class ChatComponent implements OnInit {
-  echo: Echo;
-  inputMessage: string;
+  echo!: Echo;
+  inputMessage!: string;
   groupMessages: Messages[] = [];
   privateMessages: Messages[] = [];
   users: User[] = [];
   authUser = JSON.parse(localStorage.getItem('user')).value.authUser;
   username = this.authUser.name;
-  selectedUser: UserAuth;
+  selectedUser!: UserAuth;
   messageNotification = new EventEmitter<{ newMessage: boolean, senderId: string, receiveId: string}>();
 
 
@@ -33,7 +33,7 @@ export class ChatComponent implements OnInit {
     this.getPrivateChat();
   }
 
-  getSelectedAuthUser(event) {
+  getSelectedAuthUser(event:any) {
     // console.log('user is : ', event);
     // console.log('auth user is : ', this.authUser);
     this.selectedUser = event;
@@ -46,32 +46,32 @@ export class ChatComponent implements OnInit {
 
   joinChat() {
     this.echo.join(`chat`)
-      .here((users) => {
+      .here((users:any) => {
         this.users = users;
         this.users = this.users.filter(user => {
           return user.id !== this.authUser.id;
         });
         console.log('users here : ', this.users);
       })
-      .joining((user) => {
+      .joining((user:any) => {
         console.log('join : ', user.name, user);
         this.users.push(user);
       })
-      .leaving((user) => {
+      .leaving((user:any) => {
         console.log('Leave : ', user.name, user);
         this.users = this.users.filter(userList => {
           return user.id !== userList.id;
         });
         console.log('new users : ', this.users);
       })
-      .error((error) => {
+      .error((error:any) => {
         console.error(error);
       });
   }
 
   getGroupChat() {
     this.echo.private('chat')
-      .listen('ChatEvent', (res) => {
+      .listen('ChatEvent', (res:any) => {
         const message: Messages = {
           message: res.message,
           me: false,
@@ -85,7 +85,7 @@ export class ChatComponent implements OnInit {
   getPrivateChat() {
     const userAuthId = this.authUser.id;
     this.echo.private('channel-direct-message.' + userAuthId)   // channel-direct-message.id
-      .listen('ChatDirectMessageEvent', (res) => {
+      .listen('ChatDirectMessageEvent', (res:any) => {
         const messages: Messages = {
           message: res.response.message,
           me: false,

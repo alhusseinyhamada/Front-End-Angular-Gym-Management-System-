@@ -10,8 +10,8 @@ import {User} from '../../../users/model/user.model';
 })
 export class ListUsersComponent implements OnInit {
   @Input() usersList: User[] = [];
-  @Input() authUser: UserAuth;
-  @Input() messageNotification: EventEmitter<any>;
+  @Input() authUser!: UserAuth;
+  @Input() messageNotification!: EventEmitter<any>;
   @Output() selectedAuthUser = new EventEmitter<UserAuth>();
   notifyNewMessage: any;
   userActive = false;
@@ -26,11 +26,11 @@ export class ListUsersComponent implements OnInit {
   }
 
   changeToGroupChat() {
-    const user: UserAuth = null;
+    const user: UserAuth =null;
     this.selectedAuthUser.emit(user);
   }
 
-  selectUser(user) {
+  selectUser(user:any) {
     if (user.id === this.authUser.id) {
       return;
     }
