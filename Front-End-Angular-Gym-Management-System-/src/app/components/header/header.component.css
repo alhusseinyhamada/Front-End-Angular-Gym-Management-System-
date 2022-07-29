@@ -36,6 +36,10 @@ img {
   width: 30px;
 }
 
+.nav-right .cart svg:hover {
+  fill: #FF0336;
+}
+
 .nav-right .join {
   padding: 5px;
   border-radius: 3px;
@@ -64,3 +68,26 @@ img {
   vertical-align: middle;
   color: white;
 }
+
+.navbar-nav li:hover > ul.dropdown-menu {
+  display: block;
+  border-radius: 0;
+  border-top: 4px solid #FF0336;
+}
+.dropdown-submenu {
+  position:relative;
+}
+
+.dropdown-submenu > .dropdown-menu {
+  top: 100%;
+}
+
+.dropdown-menu > li > a{
+  color: #000;
+  background-color: white;
+}
+
+.dropdown-menu > li > a:hover {
+  color: #FF0336;
+}
+

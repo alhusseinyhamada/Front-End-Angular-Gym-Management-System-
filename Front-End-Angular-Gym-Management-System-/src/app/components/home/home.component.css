@@ -24,6 +24,18 @@
 .image-header h2{
   font-size:50px;
 }
+
+.move2 {
+  animation: bg2 3s infinite;
+  animation-timing-function: ease-in-out;
+  -webkit-animation: bg2 3s infinite;
+}
+
+@keyframes bg2 {
+  0%   {left:13%; top: 20%;}
+  50%  {left:14%; top: 15%;}
+  100% {left:13%; top: 20%;}
+}
 /*end image-header*/
 .gym-image{
   background-image:url('https://radiustheme.com/demo/wordpress/themes/gymat/wp-content/uploads/2022/04/shape-17.png');
@@ -44,6 +56,17 @@
   padding:10px;
   border:none;
   outline:none;
+}
+.move3 {
+  animation: bg3 3s infinite;
+  animation-timing-function: ease-in-out;
+  -webkit-animation: bg3 3s infinite;
+}
+
+@keyframes bg3 {
+  0%   {left:10%; right: 10%;}
+  50%  {left:30%; right: 60%;}
+  100% {left:10%;right: 90%;}
 }
 
 
