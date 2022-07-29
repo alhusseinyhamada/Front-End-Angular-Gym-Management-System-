@@ -12,6 +12,7 @@ import { TodayClassesComponent } from './components/today-classes/today-classes.
 import { ShopComponent } from './components/shop/shop.component';
 import { TrainerDetailComponent } from './components/trainer-detail/trainer-detail.component';
 import { TrainerComponent } from './components/trainer/trainer.component';
+import { MembershipComponent } from './components/membership/membership.component';
 
 
 const routes: Routes = [{path:"",component: MainLayoutComponent,children:[
@@ -26,10 +27,7 @@ const routes: Routes = [{path:"",component: MainLayoutComponent,children:[
   {path:'trainers',component:TrainerComponent},
   {path:'trainerdetails',component:TrainerDetailComponent},
   {path:'shop',component:ShopComponent},
-
-
-
-
+  {path:'membership',component:MembershipComponent},
 
 ]},
 {path:'**',component:NotFoundComponent},

@@ -19,6 +19,7 @@ import { TodayClassesComponent } from './components/today-classes/today-classes.
 import { Next2DaysClassesComponent } from './components/next2-days-classes/next2-days-classes.component';
 import { LoginService } from './services/login.service';
 import { ShopComponent } from './components/shop/shop.component';
+import { MembershipComponent } from './components/membership/membership.component';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import { ShopComponent } from './components/shop/shop.component';
     TrainerDetailComponent,
     TodayClassesComponent,
     Next2DaysClassesComponent,
-    ShopComponent
+    ShopComponent,
+    MembershipComponent
   ],
   imports: [
     BrowserModule,
