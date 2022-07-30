@@ -35,10 +35,31 @@
           <a class="nav-link" routerLinkActive="active" routerLink="/shop">Shops</a>
         </li>
         <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" routerLink="/Payment">تعالى ادفع </a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" routerLinkActive="active" routerLink="/contact">Contact</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" routerLinkActive="active" routerLink="/calculator">calculator</a>
+          <a class="nav-link" routerLinkActive="active" routerLink="/profile" *ngIf="isSignedIn">Profile</a>
+
+        </li>
+        <li >
+          <button class="btn btn-outline-primary" (click)="signOut()" *ngIf="isSignedIn">Log out</button>
+            </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active"  *ngIf="!isSignedIn" routerLink="/login">Login</a>
+        </li> <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active"*ngIf="!isSignedIn"  routerLink="/register">Register</a>
+        </li>
+
+        <li>
+          <a class="nav-link" routerLinkActive="active" routerLink="/calculator">calculator</a>
+        </li>
+        <li>
+          <a class="nav-link" routerLink="/calculator">calculator</a>
         </li>
       </ul>
     </div>
@@ -58,4 +79,3 @@
     </div>
   </div>
 
-<!-- </nav> -->
