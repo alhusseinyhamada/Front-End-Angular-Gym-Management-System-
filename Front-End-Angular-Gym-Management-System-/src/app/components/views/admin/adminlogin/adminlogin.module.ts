@@ -6,8 +6,11 @@ import { AdminloginComponent } from './adminlogin.component';
 
 import {  ReactiveFormsModule,FormsModule } from '@angular/forms';
 
+
+
 @NgModule({
   declarations: [
+    AdminloginComponent,
     
   ],
   imports: [

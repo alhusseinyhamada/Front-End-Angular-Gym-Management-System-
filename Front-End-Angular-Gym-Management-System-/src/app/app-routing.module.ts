@@ -13,6 +13,7 @@ import { SignupComponent } from './components/signup/signup.component';
 import { UserProfileComponent } from './components/user-profile/user-profile.component';
 // const routes: Routes = [
 
+import { PaymentComponent } from './components/payment/payment.component';
 import { AdminLayoutComponent } from './layout/admin-layout/admin-layout.component';
 
 // const routes: Routes = [
@@ -65,19 +66,12 @@ const routes:Routes = [{path:"",component: MainLayoutComponent,children:[
 
 ]} ,
 
-{path:'admin/login',component:AdminloginComponent}
+{path:'admin/login',component:AdminloginComponent},
+
+  {path:'Payment',component:PaymentComponent},
 
 
-
-
-
-
-
-
-
-
-
-,{path:'**',component:NotFoundComponent},
+{path:'**',component:NotFoundComponent},
 
 
 

@@ -12,6 +12,8 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 import { LayoutModule } from './layout/layout.module';
 
 
+
+
 import { CalculatorComponent } from './components/calculator/calculator.component';
 import { ClassComponent } from './components/class/class.component';
 import { AboutComponent } from './components/about/about.component';
@@ -29,6 +31,7 @@ import { TrainerComponent } from './components/trainer/trainer.component';
 import { TopComponent } from './components/top/top.component';
 import { ClassDetailsComponent } from './components/class-details/class-details.component';
 import { TrainerDetailComponent } from './components/trainer-detail/trainer-detail.component';
+import { PaymentComponent } from './components/payment/payment.component';
 import { TodayClassesComponent } from './components/today-classes/today-classes.component';
 import { Next2DaysClassesComponent } from './components/next2-days-classes/next2-days-classes.component';
 import { LoginService } from './services/login.service';
@@ -59,22 +62,20 @@ import { AdminloginComponent } from './components/views/admin/adminlogin/adminlo
     TopComponent,
     ClassDetailsComponent,
     TrainerDetailComponent,
+    PaymentComponent
     TodayClassesComponent,
     Next2DaysClassesComponent,
     ShopComponent
   ],
   imports: [
+
+   
+    BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-     HttpClientModule,
-     BrowserModule,
+    HttpClientModule,
     LayoutModule,
     FormsModule,
-    HttpClientModule,
-    ReactiveFormsModule,
-   
-
-
 
   ],
   providers: [
