@@ -9,6 +9,12 @@ import { BodyComponent } from './components/body/body.component';
 import { MainLayoutComponent } from './components/main-layout/main-layout.component';
 import { HomeComponent } from './components/home/home.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { LayoutModule } from './layout/layout.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+
+import { HttpClientModule } from '@angular/common/http';
+import { CalculatorComponent } from './components/calculator/calculator.component';
 import { ClassComponent } from './components/class/class.component';
 import { AboutComponent } from './components/about/about.component';
 import { TrainerComponent } from './components/trainer/trainer.component';
@@ -18,6 +24,11 @@ import { TrainerDetailComponent } from './components/trainer-detail/trainer-deta
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { PaymentComponent } from './components/payment/payment.component';
+import { TodayClassesComponent } from './components/today-classes/today-classes.component';
+import { Next2DaysClassesComponent } from './components/next2-days-classes/next2-days-classes.component';
+import { LoginService } from './services/login.service';
+import { ShopComponent } from './components/shop/shop.component';
+
 
 @NgModule({
   declarations: [
@@ -28,13 +39,19 @@ import { PaymentComponent } from './components/payment/payment.component';
     MainLayoutComponent,
     HomeComponent,
     NotFoundComponent,
-    ClassComponent,
+    CalculatorComponent,
+
+
+
     AboutComponent,
     TrainerComponent,
     TopComponent,
     ClassDetailsComponent,
     TrainerDetailComponent,
     PaymentComponent
+    TodayClassesComponent,
+    Next2DaysClassesComponent,
+    ShopComponent
   ],
   imports: [
     BrowserModule,
@@ -42,8 +59,12 @@ import { PaymentComponent } from './components/payment/payment.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    LayoutModule,
+    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [LoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
