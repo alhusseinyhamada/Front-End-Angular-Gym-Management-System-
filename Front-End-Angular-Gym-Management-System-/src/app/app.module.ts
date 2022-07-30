@@ -10,24 +10,34 @@ import { MainLayoutComponent } from './components/main-layout/main-layout.compon
 import { HomeComponent } from './components/home/home.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { LayoutModule } from './layout/layout.module';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
-import { HttpClientModule } from '@angular/common/http';
+
+
 import { CalculatorComponent } from './components/calculator/calculator.component';
 import { ClassComponent } from './components/class/class.component';
 import { AboutComponent } from './components/about/about.component';
+import {  ReactiveFormsModule,FormsModule } from '@angular/forms';
+import { SigninComponent } from './components/signin/signin.component';
+import { SignupComponent } from './components/signup/signup.component';
+import { UserProfileComponent } from './components/user-profile/user-profile.component';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { AuthInterceptor } from './shared/auth.interceptor';
+import { AdminInterceptor } from './services/shared/admin.interceptor';
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import { TrainerComponent } from './components/trainer/trainer.component';
 import { TopComponent } from './components/top/top.component';
 import { ClassDetailsComponent } from './components/class-details/class-details.component';
 import { TrainerDetailComponent } from './components/trainer-detail/trainer-detail.component';
-import { FormsModule,ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
 import { PaymentComponent } from './components/payment/payment.component';
 import { TodayClassesComponent } from './components/today-classes/today-classes.component';
 import { Next2DaysClassesComponent } from './components/next2-days-classes/next2-days-classes.component';
 import { LoginService } from './services/login.service';
 import { ShopComponent } from './components/shop/shop.component';
+import { AdminloginComponent } from './components/views/admin/adminlogin/adminlogin.component';
+
 
 
 @NgModule({
@@ -41,9 +51,13 @@ import { ShopComponent } from './components/shop/shop.component';
     NotFoundComponent,
     CalculatorComponent,
 
-
-
     AboutComponent,
+    SigninComponent,
+    SignupComponent,
+   
+    UserProfileComponent,
+   
+    AdminloginComponent,
     TrainerComponent,
     TopComponent,
     ClassDetailsComponent,
@@ -54,17 +68,34 @@ import { ShopComponent } from './components/shop/shop.component';
     ShopComponent
   ],
   imports: [
+
+   
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
     LayoutModule,
     FormsModule,
-    HttpClientModule,
-    ReactiveFormsModule
+
   ],
-  providers: [LoginService],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AdminInterceptor,
+      multi: true,
+    
+  
+  
+    },
+    {
+    provide: HTTP_INTERCEPTORS,
+    useClass: AuthInterceptor,
+    multi: true,
+  
+
+
+  }],
+ 
   bootstrap: [AppComponent]
 })
 export class AppModule { }

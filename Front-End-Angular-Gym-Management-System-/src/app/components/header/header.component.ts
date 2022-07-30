@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { TokenService } from './../../shared/token.service';
+import { AuthStateService } from './../../shared/auth-state.service';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-header',
@@ -7,9 +11,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit(): void {
+  
+  isSignedIn!: boolean;
+  constructor(
+    private auth: AuthStateService,
+    public router: Router,
+    public token: TokenService
+  ) {}
+  ngOnInit() {
+    this.auth.userAuthState.subscribe((val) => {
+      this.isSignedIn = val;
+    });
   }
+  // Signout
+  signOut() {
+    this.auth.setAuthState(false);
+    this.token.removeToken();
+    this.router.navigate(['login']);
+  }
+
 
 }

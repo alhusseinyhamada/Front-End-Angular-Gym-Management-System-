@@ -4,6 +4,9 @@ import { CommonModule } from '@angular/common';
 import { AdminloginRoutingModule } from './adminlogin-routing.module';
 import { AdminloginComponent } from './adminlogin.component';
 
+import {  ReactiveFormsModule,FormsModule } from '@angular/forms';
+
+
 
 @NgModule({
   declarations: [
@@ -13,6 +16,9 @@ import { AdminloginComponent } from './adminlogin.component';
   imports: [
     CommonModule,
     AdminloginRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+
 
   ]
 })

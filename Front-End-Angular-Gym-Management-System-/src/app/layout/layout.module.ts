@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { AdminLayoutComponent } from './admin-layout/admin-layout.component';
 import { RouterModule } from '@angular/router';
 
+import {  ReactiveFormsModule,FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -11,7 +12,10 @@ import { RouterModule } from '@angular/router';
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    FormsModule,
+    ReactiveFormsModule
+
   ]
 })
 export class LayoutModule { }
