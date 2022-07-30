@@ -9,7 +9,7 @@
       <p class="my-5">
         Gymhen an unknown printer took a galley of type and scrambled <br>It has survived nknown printercenturies.
       </p>
-      <button>OUR CLASSES <img src="assets/images/arrow-right.svg"></button>
+      <button routerLink="/classes">OUR CLASSES <img src="assets/images/arrow-right.svg" ></button>
     </div>
   </div>
 </div>
@@ -131,10 +131,14 @@
     <h3 class="text-center mb-5" >Meet Our Experienced<br>
       Cool Trainers</h3>
       <div class="d-lg-flex justify-content-evenly">
+      <div  class=" section-one d-flex" *ngFor="let Trainer of Trainers; let i = index" style="position:relative">
+        <div class="text">
+          <h4 >{{Trainer.name}}</h4>
       <div  class=" section-one d-flex" style="position:relative">
         <div class="text" >
           <h4> Dorian Yates</h4>
           <p>Yoga Trainer</p>
+          <p>{{Trainer.decription}}</p>
           <a class="facebook"><i class="bi bi-facebook me-3" style="color:#888"></i></a>
           <a class="twitter"><i class="bi bi-twitter" style="color:#888"></i></a>
           <a class="linkedin"><i class="bi bi-behance mx-3" style="color:#888"></i></a>

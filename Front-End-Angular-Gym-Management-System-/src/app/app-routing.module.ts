@@ -7,6 +7,7 @@ import { HomeComponent } from './components/home/home.component';
 import { MainLayoutComponent } from './components/main-layout/main-layout.component';
 import { Next2DaysClassesComponent } from './components/next2-days-classes/next2-days-classes.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { PaymentComponent } from './components/payment/payment.component';
 import { AdminLayoutComponent } from './layout/admin-layout/admin-layout.component';
 
 // const routes: Routes = [
@@ -34,6 +35,11 @@ const routes: Routes = [{path:"",component: MainLayoutComponent,children:[
   {path:'about',component:AboutComponent},
   {path:'trainers',component:TrainerComponent},
   {path:'trainerdetails',component:TrainerDetailComponent},
+
+  {path:'Payment',component:PaymentComponent},
+]},
+{path:'**',component:NotFoundComponent},
+];
   {path:'shop',component:ShopComponent},
 
 

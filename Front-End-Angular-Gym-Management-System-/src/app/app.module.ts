@@ -21,6 +21,9 @@ import { TrainerComponent } from './components/trainer/trainer.component';
 import { TopComponent } from './components/top/top.component';
 import { ClassDetailsComponent } from './components/class-details/class-details.component';
 import { TrainerDetailComponent } from './components/trainer-detail/trainer-detail.component';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { PaymentComponent } from './components/payment/payment.component';
 import { TodayClassesComponent } from './components/today-classes/today-classes.component';
 import { Next2DaysClassesComponent } from './components/next2-days-classes/next2-days-classes.component';
 import { LoginService } from './services/login.service';
@@ -45,6 +48,7 @@ import { ShopComponent } from './components/shop/shop.component';
     TopComponent,
     ClassDetailsComponent,
     TrainerDetailComponent,
+    PaymentComponent
     TodayClassesComponent,
     Next2DaysClassesComponent,
     ShopComponent
@@ -52,6 +56,9 @@ import { ShopComponent } from './components/shop/shop.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
     LayoutModule,
     FormsModule,
     HttpClientModule,
