@@ -5,7 +5,6 @@ import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, Router } from
 
 import { Observable } from 'rxjs';
 
-import { AuthService } from './shared/auth.service';
 import { TokenService } from './shared/token.service';
 
 
@@ -17,7 +16,7 @@ import { TokenService } from './shared/token.service';
 
 export class ExpenseGuard implements CanActivate {
 
-  constructor(private authService: AuthService,private token:TokenService ,private router: Router) {}
+  constructor(private token:TokenService ,private router: Router) {}
 
   canActivate(
 
@@ -25,7 +24,7 @@ export class ExpenseGuard implements CanActivate {
 
     state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {
 
-      if (!this.token.isLoggedInn()) {
+      if (!this.token.isLoggedIn()) {
 
         this.router.navigate(['/login']); // go to login if not authenticated
 

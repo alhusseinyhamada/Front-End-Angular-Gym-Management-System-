@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from './../../shared/auth.service';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup,Validators } from '@angular/forms';
 import { TokenService } from '../../shared/token.service';
 import { AuthStateService } from '../../shared/auth-state.service';
 @Component({
@@ -20,8 +20,12 @@ export class SigninComponent implements OnInit {
     private authState: AuthStateService
   ) {
     this.loginForm = this.fb.group({
-      email: [],
-      password: [],
+      email:new FormControl('', [Validators.required, Validators.email,Validators.pattern(
+        '[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,63}$',
+      ),]),
+      password:new FormControl('', [Validators.required
+     ])
+    
     });
   }
   ngOnInit() {}
@@ -39,7 +43,7 @@ export class SigninComponent implements OnInit {
         
         this.authState.setAuthState(true);
         this.loginForm.reset();
-        this.router.navigate(['home']);
+        this.router.navigate(['profile']);
       }
     );
   }
@@ -48,6 +52,5 @@ export class SigninComponent implements OnInit {
 
 
     this.token.handleData(data.user.access_token);
-            
   }
 }

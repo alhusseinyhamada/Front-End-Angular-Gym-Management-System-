@@ -17,6 +17,9 @@ export class User {
   providedIn: 'root',
 })
 export class AuthService {
+  isAuthenticated() {
+    throw new Error('Method not implemented.');
+  }
   constructor(private http: HttpClient) {}
   // User registration
   register(user: any): Observable<any> {

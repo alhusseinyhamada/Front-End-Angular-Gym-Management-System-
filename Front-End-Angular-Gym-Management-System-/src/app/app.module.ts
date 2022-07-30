@@ -23,6 +23,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthInterceptor } from './shared/auth.interceptor';
 import { AdminInterceptor } from './services/shared/admin.interceptor';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { TrainerComponent } from './components/trainer/trainer.component';
 import { TopComponent } from './components/top/top.component';
@@ -63,16 +64,17 @@ import { AdminloginComponent } from './components/views/admin/adminlogin/adminlo
     ShopComponent
   ],
   imports: [
-    BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
      HttpClientModule,
-        FormsModule,
-
+     BrowserModule,
     LayoutModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+   
+
+
 
   ],
   providers: [

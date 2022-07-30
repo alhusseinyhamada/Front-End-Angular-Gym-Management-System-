@@ -1,5 +1,5 @@
 <div class="auth-wrapper">
-    <form class="form-signin" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <form class="form-signin" [formGroup]="loginForm"  (ngSubmit)="onSubmit()"   novalidate>
         <h3 class="h3 mb-3 font-weight-normal text-center">Sign in</h3>
         <!-- Errors -->
         <div *ngIf="errors?.email" class="alert alert-danger mt-3">
@@ -13,13 +13,27 @@
         </div>
         <!-- Login -->
         <div class="form-group">
-            <label>Email address</label>
-            <input type="email" class="form-control" formControlName="email">
-        </div>
+            
+                <input matInput placeholder="Email" formControlName="email">
+                <div *ngIf="!loginForm.get('email')?.errors?.['required'] && (loginForm.get('email')?.errors?.['pattern'])">
+                  Please enter a valid email address
+                </div>
+                <div *ngIf="loginForm.get('email')?.invalid && (loginForm.get('email')?.dirty || loginForm.get('email')?.touched) && loginForm.get('email')?.errors?.['required']">
+                  Email is required
+                </div>
+              </div>
+        
         <div class="form-group">
-            <label>Password</label>
-            <input type="password" class="form-control" formControlName="password">
-        </div>
-        <button type="submit" class="btn btn-block btn-primary">Log in</button>
+            
+                <input matInput type="password" placeholder="Password" formControlName="password">    
+                <div *ngIf="!loginForm.get('password')?.errors?.['required']">
+                  
+                </div>
+                <div *ngIf="loginForm.get('password')?.invalid && (loginForm.get('password')?.dirty || loginForm.get('password')?.touched) && loginForm.get('password')?.errors?.['required']">
+                  Password is required
+                </div>
+              </div>
+       
+        <button type="submit" [disabled]="!loginForm.valid" mat-raised-button class="btn btn-block btn-primary">Log in</button>
     </form>
   </div>
