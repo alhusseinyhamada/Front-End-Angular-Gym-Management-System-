@@ -15,7 +15,9 @@ import { TrainerComponent } from './components/trainer/trainer.component';
 import { TopComponent } from './components/top/top.component';
 import { ClassDetailsComponent } from './components/class-details/class-details.component';
 import { TrainerDetailComponent } from './components/trainer-detail/trainer-detail.component';
-
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { PaymentComponent } from './components/payment/payment.component';
 
 @NgModule({
   declarations: [
@@ -31,11 +33,15 @@ import { TrainerDetailComponent } from './components/trainer-detail/trainer-deta
     TrainerComponent,
     TopComponent,
     ClassDetailsComponent,
-    TrainerDetailComponent
+    TrainerDetailComponent,
+    PaymentComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
